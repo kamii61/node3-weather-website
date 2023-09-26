@@ -57,6 +57,8 @@ app.get('/weather',(req,res) => {
                 error: "The address " + query.address + " is no existed!!"
             })
         }
+        console.log("Latitute is "+ Latitute)
+        console.log("Longtitute is "+ Longtitute)
         forecast(Latitute,Longtitute, (error, {precip:forecast,temperature} = {}) =>{
             if(error){
                 res.send({

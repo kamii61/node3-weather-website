@@ -8,9 +8,10 @@ const GeoCode = (address, callback) => {
         } else if(body.error) {
             callback('Unable to find location. Try another search.',undefined)
         } else {
+            console.log(body[0])
             callback(undefined,{
                 Latitute: body[0].lat,
-                Longtitude: body[0].lon,
+                Longtitute: body[0].lon,
                 Location: body[0].display_name
             })
         }
