@@ -9,9 +9,9 @@ const forecast = (Latitute, Longtitude, callback) => {
             callback("No matching",undefined)
         } 
         else {
-            callback(undefined,{
-               temperature: body.current.temperature,
-               precip: body.current.precip})
+            console.log(body)
+            callback(undefined,"It is currently " + body.current.temperature + "*" + ", Chance to rain is " + body.current.precip 
+            + " Wind speed is " + body.current.wind_speed)
         }
 })
 }
